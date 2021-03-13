@@ -7,6 +7,7 @@
 
 import UIKit
 import AlamofireImage
+import Parse
 
 class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -15,6 +16,25 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     @IBOutlet weak var commentField: UITextField!
     
     @IBAction func onShare(_ sender: Any) {
+        let post = PFObject(className: "Posts") //an object is basically like a dictionary with key-value pairs. PFObjects in Parse are schemaless meaning you dont need to have declared a set of key-value pairs beforehand and can just create after creating an object.
+        
+        post["caption"] = commentField.text! //creates a column called caption
+        post["author"] = PFUser.current()! //pointer to the user who is logged in
+        
+        let imageData = imageView.image!.pngData() //the scaledImage chosen from camera is saved as png data and stored in imageData variable.
+        let file = PFFileObject(name: "image.png", data: imageData!) //creates a PFFile Object that stores the png image from imageData as a binary object. This is the data that will be stored for the photos column in the table in the class Posts, but as a url to the png image.
+        
+        //what this does is that the png image in variable imageData is saved in a seperate table for the photos and this key/column "image" will have the url to that image.
+        post["image"] = file
+        //Every PFObject can save itself by using
+        post.saveInBackground { (success, error) in
+            if success { //on saved successfully, we want to dismiss the cameraviewcontroller screen so that we transition back to the feed view controller screen where we can see the photo posted on the feed.
+                self.dismiss(animated: true, completion: nil)
+                print("saved!")
+            } else {
+                print("error")
+            }
+        }
     }
     
     @IBAction func onCameraButton(_ sender: Any) {

@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -97,6 +98,60 @@
                     <view key="view" contentMode="scaleToFill" id="6Ro-f6-Tji">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Hgo-pW-KJR">
+                                <rect key="frame" x="0.0" y="26" width="414" height="870"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="512" id="kOi-YS-PR7" customClass="PostCell" customModule="Parstagram" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="512"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kOi-YS-PR7" id="afB-UE-1nK">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="512"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nKJ-8G-Eiq">
+                                                    <rect key="frame" x="8" y="8" width="398" height="467"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="nKJ-8G-Eiq" secondAttribute="height" multiplier="398:467" id="txQ-Bq-Ol8"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Tsering" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="awf-I6-h8x">
+                                                    <rect key="frame" x="8" y="483" width="57" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is my first post!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rEo-Zy-DYH">
+                                                    <rect key="frame" x="73" y="483" width="333" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="nKJ-8G-Eiq" secondAttribute="trailing" constant="8" id="AVG-T2-S0K"/>
+                                                <constraint firstItem="rEo-Zy-DYH" firstAttribute="top" secondItem="nKJ-8G-Eiq" secondAttribute="bottom" constant="8" id="GlR-Oa-t3B"/>
+                                                <constraint firstItem="nKJ-8G-Eiq" firstAttribute="top" secondItem="afB-UE-1nK" secondAttribute="top" constant="8" id="JSR-hx-4dY"/>
+                                                <constraint firstItem="rEo-Zy-DYH" firstAttribute="leading" secondItem="awf-I6-h8x" secondAttribute="trailing" constant="8" id="PAf-9X-eaJ"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="rEo-Zy-DYH" secondAttribute="bottom" constant="8" id="UAF-aG-jtl"/>
+                                                <constraint firstItem="rEo-Zy-DYH" firstAttribute="leading" secondItem="awf-I6-h8x" secondAttribute="trailing" constant="8" id="UMA-Dv-Nwu"/>
+                                                <constraint firstAttribute="trailing" secondItem="rEo-Zy-DYH" secondAttribute="trailing" constant="8" id="bMz-Uu-DnJ"/>
+                                                <constraint firstItem="nKJ-8G-Eiq" firstAttribute="leading" secondItem="afB-UE-1nK" secondAttribute="leading" constant="8" id="jFH-vW-94A"/>
+                                                <constraint firstItem="awf-I6-h8x" firstAttribute="top" secondItem="nKJ-8G-Eiq" secondAttribute="bottom" constant="8" id="wNi-5z-t4J"/>
+                                                <constraint firstItem="awf-I6-h8x" firstAttribute="leading" secondItem="afB-UE-1nK" secondAttribute="leading" constant="8" id="yUb-KL-m4Z"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="captionLabel" destination="rEo-Zy-DYH" id="YHW-RF-iEw"/>
+                                            <outlet property="photoView" destination="nKJ-8G-Eiq" id="Zlm-bY-LpI"/>
+                                            <outlet property="usernameLabel" destination="awf-I6-h8x" id="WIt-4H-3r3"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="A2t-GM-rhe"/>
                         <color key="backgroundColor" red="0.47049746599999998" green="1" blue="0.99063740950000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -107,10 +162,13 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="Hgo-pW-KJR" id="maV-bf-QSq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NX6-AM-d9E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1481" y="78"/>
+            <point key="canvasLocation" x="1478.2608695652175" y="77.678571428571431"/>
         </scene>
         <!--Camera View Controller-->
         <scene sceneID="Te0-Xc-VjV">
@@ -186,5 +244,8 @@
         <image name="image_placeholder" width="375" height="375"/>
         <image name="insta_camera_btn" width="25" height="25"/>
         <image name="instagram_logo" width="255" height="108"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
