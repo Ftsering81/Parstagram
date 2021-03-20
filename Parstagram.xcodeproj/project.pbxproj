@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		483AAEA4B171D422FF8EC7AF /* Pods_ParstagramTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 042FB63E532154D2AEEB1EFC /* Pods_ParstagramTests.framework */; };
 		61D6EFBA4A33AD4D1B125F57 /* Pods_Parstagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9992781F553118A95F639F7C /* Pods_Parstagram.framework */; };
+		D24A8C0926058F2E00083F75 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24A8C0826058F2E00083F75 /* CommentCell.swift */; };
 		D281C62125FA566A00E8D95A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D281C62025FA566A00E8D95A /* LoginViewController.swift */; };
 		D281C62625FA568600E8D95A /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D281C62525FA568600E8D95A /* FeedViewController.swift */; };
 		D281C62E25FA7D3200E8D95A /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D281C62D25FA7D3200E8D95A /* CameraViewController.swift */; };
@@ -50,6 +51,7 @@
 		A87D653AF6897B210DF5561E /* Pods-Parstagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Parstagram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Parstagram/Pods-Parstagram.debug.xcconfig"; sourceTree = "<group>"; };
 		CF885D11D9193CECDEA7C0AF /* Pods_ParstagramUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParstagramUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D19D3BFB85D69728127A3FF3 /* Pods-ParstagramTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParstagramTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ParstagramTests/Pods-ParstagramTests.release.xcconfig"; sourceTree = "<group>"; };
+		D24A8C0826058F2E00083F75 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		D281C62025FA566A00E8D95A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D281C62525FA568600E8D95A /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		D281C62D25FA7D3200E8D95A /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				D281C62525FA568600E8D95A /* FeedViewController.swift */,
 				D281C62D25FA7D3200E8D95A /* CameraViewController.swift */,
 				D2A09EC425FC6F1100DA720C /* PostCell.swift */,
+				D24A8C0826058F2E00083F75 /* CommentCell.swift */,
 			);
 			path = Parstagram;
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/MessageInputBar/MessageInputBar.framework",
 				"${BUILT_PRODUCTS_DIR}/Parse/Parse.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -360,6 +364,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MessageInputBar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Parse.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -398,6 +403,7 @@
 				D281C62625FA568600E8D95A /* FeedViewController.swift in Sources */,
 				D2B78AE925FA2FD30004A9D0 /* SceneDelegate.swift in Sources */,
 				D2A09EC525FC6F1100DA720C /* PostCell.swift in Sources */,
+				D24A8C0926058F2E00083F75 /* CommentCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

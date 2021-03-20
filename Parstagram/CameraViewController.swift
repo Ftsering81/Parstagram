@@ -59,7 +59,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         
         //once we have the image, we want to resize it because this image is like 10 megabyte image aka too big and if we try to upload it, it will cause issues. So to resize and display the image, we will use the pod AlamofireImage.
         let size = CGSize(width: 300, height: 300) //CGSize means Core Graphic Size
-        let scaledImage = image.af_imageScaled(to: size) //scales down to the size specified in size variable
+        let scaledImage = image.af.imageScaled(to: size) //scales down to the size specified in size variable
         imageView.image = scaledImage
         
         dismiss(animated: true, completion: nil) //we might need to dismiss that camera view
