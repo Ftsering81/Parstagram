@@ -49,5 +49,7 @@ The following **bonus** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
+<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />![finalinsta](https://user-images.githubusercontent.com/62700031/111858593-952a6e00-8910-11eb-9cec-10dd4fa7ddbe.gif)
+
 
 
