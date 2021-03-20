@@ -48,5 +48,6 @@ The following **bonus** features are implemented:
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
-![finalinsta](https://user-images.githubusercontent.com/62700031/111022353-445ec680-83a0-11eb-903c-f50ccddf9bf7.gif)
+![pars2](https://user-images.githubusercontent.com/62700031/111858403-079a4e80-890f-11eb-9075-24107ee18147.gif)
+
 
